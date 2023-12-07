@@ -26,6 +26,12 @@ In this part of the chess engine series, you’ll be writing some abstractions f
 
 The templates are in the `python` and `java` directories. You may use your own language if you want but you’ll need to translate the templates over if you want to follow along with the tutorial. I set up unit testing (see below!!!), which can be ran by running with `test` as the first argument.
 
+Alternatively, you can fork this Replits:
+
+**Replit Python**: https://replit.com/@notGilbert/chess-engine-0-python#main.py
+
+**Replit Java**: https://replit.com/@notGilbert/chess-engine-0-java#main.py
+
 I would tackle it in this order:
 
 1. `piece.py` or `Piece.java`
