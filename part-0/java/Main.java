@@ -9,8 +9,8 @@ public class Main {
         t.assertEqual("1 + 1 == 2", 1 + 1, 2);
 
         // Try writing your own tests!
-        // locationTests(t);
-        // boardTests(t);
+        locationTests(t);
+        boardTests(t);
 
         t.endTests();
     }

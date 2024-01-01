@@ -30,6 +30,15 @@ def location_tests(t: PrimitiveTestFramework):
     t.assert_equal("Location e5 should be index 55",
                    Location.from_file_rank('e', 5), Location(55))
 
+    t.assert_equal("Location a1 should be in file a",
+                   Location.from_file_rank('a', 1).file(), "a")
+    t.assert_equal("Location g3 should be in file g",
+                   Location.from_file_rank('g', 3).file(), "g")
+    t.assert_equal("Location a1 should be in rank 1",
+                   Location.from_file_rank('a', 1).rank(), 1)
+    t.assert_equal("Location h8 should be in rank 8",
+                   Location.from_file_rank('h', 8).rank(), 8)
+
     t.assert_true("Location with index 4 should not be valid",
                   not Location(4).is_valid())
     t.assert_true("Location with index 10 should not be valid",

@@ -61,6 +61,18 @@ class Location:
         """
         raise NotImplementedError("Implement me!")
 
+    def file(self) -> str:
+        """
+        Returns the file (a-h, inclusive) of this location
+        """
+        raise NotImplementedError("Implement me!")
+
+    def rank(self) -> int:
+        """
+        Returns the rank (1-8, inclusive) of this location
+        """
+        raise NotImplementedError("Implement me!")
+
     # These methods are used for convenience
     def __eq__(self, other):
         return self.index == other.index
