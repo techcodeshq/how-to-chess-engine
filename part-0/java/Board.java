@@ -34,7 +34,6 @@ public class Board {
     }
 
     // Returns the piece at the given location.
-    // If the location is invalid, throw an IllegalArgumentException.
     public Piece getPiece(final Location location) {
         throw new UnsupportedOperationException("Not implemented yet. (Implement me!)");
     }
