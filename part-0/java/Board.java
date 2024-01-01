@@ -19,18 +19,18 @@ public class Board {
     // white side
     private Piece[] board;
 
-    // Takes a FEN string and returns a Board object.
+    // Takes a FEN string and initializes a Board object.
     // (only worry about the piece placement part of FEN for now! Ignore the rest
     // but make sure your code doesn't crash if it sees it)
     // Throws an IllegalArgumentException if the FEN string is invalid.
     // For more information on FEN, see https://www.chess.com/terms/fen-chess
-    public static Board fromFEN(final String fen) {
+    Board(final String fen) {
         throw new UnsupportedOperationException("Not implemented yet. (Implement me!)");
     }
 
     // Returns a board with the pieces in their starting positions.
     public static Board startingPosition() {
-        return fromFEN("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR");
+        return new Board("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR");
     }
 
     // Returns the piece at the given location.

@@ -18,10 +18,10 @@ public class Main {
     private static void locationTests(PrimitiveTestFramework t) {
         t.assertEqual("Two locations should be equal if they have the same index", new Location(65), new Location(65));
 
-        t.assertEqual("Location a1 should be index 91", Location.fromFileRank('a', 1), new Location(91));
-        t.assertEqual("Location a8 should be index 21", Location.fromFileRank('a', 8), new Location(21));
-        t.assertEqual("Location h8 should be index 28", Location.fromFileRank('h', 8), new Location(28));
-        t.assertEqual("Location e5 should be index 55", Location.fromFileRank('e', 5), new Location(55));
+        t.assertEqual("Location a1 should be index 91", new Location('a', 1), new Location(91));
+        t.assertEqual("Location a8 should be index 21", new Location('a', 8), new Location(21));
+        t.assertEqual("Location h8 should be index 28", new Location('h', 8), new Location(28));
+        t.assertEqual("Location e5 should be index 55", new Location('e', 5), new Location(55));
 
         t.assertTrue("Location with index 4 should not be valid", !new Location(4).isValid());
         t.assertTrue("Location with index 10 should not be valid", !new Location(10).isValid());
@@ -38,10 +38,10 @@ public class Main {
 
     private static void boardTests(PrimitiveTestFramework t) {
         Board board = Board.startingPosition();
-        t.assertEqual("Starting position a1", board.getPiece(Location.fromFileRank('a', 1)), Piece.WhiteRook);
-        t.assertEqual("Starting position e8", board.getPiece(Location.fromFileRank('e', 8)), Piece.BlackKing);
-        t.assertEqual("Starting position d3", board.getPiece(Location.fromFileRank('a', 1)), Piece.Empty);
-        t.assertEqual("Starting position b7", board.getPiece(Location.fromFileRank('a', 1)), Piece.BlackPawn);
+        t.assertEqual("Starting position a1", board.getPiece(new Location('a', 1)), Piece.WhiteRook);
+        t.assertEqual("Starting position e8", board.getPiece(new Location('e', 8)), Piece.BlackKing);
+        t.assertEqual("Starting position d3", board.getPiece(new Location('a', 1)), Piece.Empty);
+        t.assertEqual("Starting position b7", board.getPiece(new Location('a', 1)), Piece.BlackPawn);
 
         // TODO: Add more tests here!
     }

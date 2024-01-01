@@ -38,13 +38,14 @@ public class Location {
         throw new UnsupportedOperationException("Not implemented yet. (Implement me!)");
     }
 
-    // Converts a file and rank to an index.
+    // Converts a file and rank to a location with an index corresponding to the
+    // file and rank.
     // (beware of the empty padding on the left, right, top, and bottom of the
     // board)
     // Throw an IllegalArgumentException if the file or rank is invalid.
     // e.g. fromFileRank('a', 1) -> index 91
     // e.g. fromFileRank('e', 4) -> index 65
-    public static Location fromFileRank(
+    Location(
             final char file,
             final int rank) {
         throw new UnsupportedOperationException("Not implemented yet. (Implement me!)");
