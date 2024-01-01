@@ -25,6 +25,12 @@ class Color:
         elif self.color == Color.BLACK:
             return Color(Color.WHITE)
 
+    def __repr__(self) -> str:
+        return {
+            Color.WHITE: "WHITE",
+            Color.BLACK: "BLACK"
+        }[self.color]
+
     def __eq__(self, other):
         return self.color == other.color
 
@@ -47,6 +53,16 @@ class PieceType:
 
     def __init__(self, color: int):
         self.color = color
+
+    def __repr__(self) -> str:
+        return {
+            PieceType.PAWN: "PAWN",
+            PieceType.KNIGHT: "KNIGHT",
+            PieceType.BISHOP: "BISHOP",
+            PieceType.ROOK: "ROOK",
+            PieceType.QUEEN: "QUEEN",
+            PieceType.KING: "KING"
+        }[self.color]
 
     def __eq__(self, other):
         return self.color == other.color
