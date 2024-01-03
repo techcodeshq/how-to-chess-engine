@@ -53,6 +53,10 @@ public class Main {
 
     // Don't worry about this!!
     public static void main(String[] args) {
+        Board b = Board.startingPosition();
+
+        b.display();
+
         if (args.length != 0 && args[0].equals("test")) {
             runTests();
         } else {

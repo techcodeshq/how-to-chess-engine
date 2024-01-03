@@ -144,6 +144,23 @@ class Piece:
             "K": Piece(Piece.WHITE_KING)
         }[char]
 
+    def to_char(self) -> str:
+        return {
+            Piece.WHITE_PAWN: "P",
+            Piece.WHITE_KNIGHT: "N",
+            Piece.WHITE_BISHOP: "B",
+            Piece.WHITE_ROOK: "R",
+            Piece.WHITE_QUEEN: "Q",
+            Piece.WHITE_KING: "K",
+            Piece.BLACK_PAWN: "p",
+            Piece.BLACK_KNIGHT: "n",
+            Piece.BLACK_BISHOP: "b",
+            Piece.BLACK_ROOK: "r",
+            Piece.BLACK_QUEEN: "q",
+            Piece.BLACK_KING: "k",
+            Piece.EMPTY: " "
+        }[self.piece]
+
     def __repr__(self):
         return {
             Piece.INVALID: "INVALID",

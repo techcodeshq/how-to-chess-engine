@@ -25,7 +25,7 @@ class Board:
     """
 
     def __init__(self, pieces: list[Piece]):
-        self.piece = pieces
+        self.pieces = pieces
 
     @staticmethod
     def from_fen(fen: str) -> "Board":
@@ -34,7 +34,7 @@ class Board:
         (only worry about the piece placement part of FEN for now! Ignore the rest
         but make sure your code doesn't crash if it sees it)
         raise an exception if the FEN is invalid
-        For more information on FEN, see https://www.chess.com/terms/fen-chess 
+        For more information on FEN, see https://www.chess.com/terms/fen-chess
         """
 
         out = []
@@ -67,7 +67,7 @@ class Board:
         Returns the piece at the given location.
         Raise an exception if the location is invalid
         """
-        return self.piece[location.index]
+        return self.pieces[location.index]
 
     # This method is optional, but it will make your life easier.
     # It is called when you try to print a Board object, return what
@@ -79,4 +79,15 @@ class Board:
         """
         Returns a string representation of the board
         """
-        raise NotImplementedError("Implement me!")
+        o = "+---+---+---+---+---+---+---+---+\n"
+
+        index = 21
+        while index < 99:
+            o += "|"
+            for _ in range(8):
+                o += " " + self.pieces[index].to_char() + " |"
+                index += 1
+            o += "\n+---+---+---+---+---+---+---+---+\n"
+            index += 2
+
+        return o

@@ -25,7 +25,7 @@ class Board:
     """
 
     def __init__(self, pieces: list[Piece]):
-        self.piece = pieces
+        self.pieces = pieces
 
     @staticmethod
     def from_fen(fen: str) -> "Board":

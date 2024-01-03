@@ -75,6 +75,8 @@ def board_tests(t: PrimitiveTestFramework):
 
 
 def run_program():
+    b = Board.starting_position()
+    print(b)
     print("We'll do this later!")
     print("If you want to run the tests, run this file with the test argument.")
 

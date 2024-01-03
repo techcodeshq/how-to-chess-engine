@@ -95,6 +95,15 @@ public class Board {
     // An example of what this could look like:
     // https://www.maketecheasier.com/assets/uploads/2023/01/terminal-stockfish-command-d-shows-a-virtual-chess-board.jpg.webp
     public void display() {
-        throw new UnsupportedOperationException("Not implemented yet. (Implement me!)");
+        System.out.println("+---+---+---+---+---+---+---+---+");
+
+        for (int index = 21; index < 99; index += 2) {
+            System.out.print("|");
+            for (int i = 0; i < 8; i++) {
+                System.out.print(" " + this.board[index].toChar() + " |");
+                index++;
+            }
+            System.out.println("\n+---+---+---+---+---+---+---+---+");
+        }
     }
 }

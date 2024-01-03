@@ -94,4 +94,31 @@ public enum Piece {
                 throw new IllegalArgumentException("Invalid piece character: " + c);
         }
     }
+
+    public char toChar() {
+        switch (this) {
+            case WhitePawn:
+            case BlackPawn:
+                return color() == Color.White ? 'P' : 'p';
+            case WhiteKnight:
+            case BlackKnight:
+                return color() == Color.White ? 'N' : 'n';
+            case WhiteBishop:
+            case BlackBishop:
+                return color() == Color.White ? 'B' : 'b';
+            case WhiteRook:
+            case BlackRook:
+                return color() == Color.White ? 'R' : 'r';
+            case WhiteQueen:
+            case BlackQueen:
+                return color() == Color.White ? 'Q' : 'q';
+            case WhiteKing:
+            case BlackKing:
+                return color() == Color.White ? 'K' : 'k';
+            case Empty:
+                return ' ';
+            default:
+                return 'X';
+        }
+    }
 }
